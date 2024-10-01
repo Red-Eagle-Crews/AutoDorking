@@ -9,4 +9,4 @@ autodorking is a simple too for google dorking, it can be use for SQLI, XSS, LFI
 
 # Usage
 do i really need to explain that? i mean i try to make the script
-super easy to use tho, just let me know if you need help :)
+super easy to use tho, you will figured it out, just let me know if you need help :)
