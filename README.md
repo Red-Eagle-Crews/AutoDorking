@@ -2,7 +2,7 @@
 autodorking is a simple too for google dorking, it can be use for SQLI, XSS, LFI, etc,
 
 # Installation
-1. git clone https://github.com/kryptonproject/AutoDorking
+1. git clone https://github.com/Red-Eagle-Crews/AutoDorking
 2. cd AutoDorking
 3. pip3 install -r requirements.txt
 4. python3 main.py
