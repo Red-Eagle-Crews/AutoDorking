@@ -11,5 +11,5 @@ autodorking is a simple tool for google dorking, it can be use for SQLI, XSS, LF
 do i really need to explain that? i mean i try to make the script
 super easy to use tho, you will figured it out, just let me know if you need help :)
 
-#Update
+# Update
 random useragents has been added! if you still got blocked by google CAPTCHA try using vpn and try again, let me know if its work :D
