@@ -2,6 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import math
 from colorama import Fore
+from fake_useragent import UserAgent
+import time
+import random
 
 
 def banner():
@@ -21,19 +24,24 @@ def banner():
                                                            |  $$$$$$/                                                          
                                                             \______/                                                           
         made by KryptonSec_My
-        v1.0
+        v1.1
 
         """
     print(Fore.GREEN + display_banner + Fore.WHITE)
 
 def google_search(query, num_results):
     search_results = []
+    ua = UserAgent()
     pages = math.ceil(num_results / 10)  
     for page in range(pages):
         start = page * 10
         search_url = f"https://www.google.com/search?q={query}&start={start}"
-        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+        headers = {'User-Agent': ua.random}
+        time.sleep(random.uniform(2, 6))
         response = requests.get(search_url, headers=headers)
+        if "captcha" in response.text.lower() or "I'm not a robot" in response.text:
+            print(Fore.RED + "[!] oh no! google captcha has blocked the requests! try using VPN or try again later! exiting.." + Fore.WHITE)
+            break
         if response.status_code == 200:
             html_content = response.text
             results = parse_search_results(html_content)
